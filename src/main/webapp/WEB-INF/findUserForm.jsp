@@ -14,6 +14,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<title>User added</title>
 
-<h3>User added successfully</h3>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+
+<t:layout title="Find User">
+    <t:errorMessage message="${errorMessage}"/>
+
+    <t:form action="findUser">
+        <t:numberfield name="id" label="Enter ID" required="true"/>
+        <t:submit/>
+    </t:form>
+</t:layout>
